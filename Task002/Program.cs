@@ -5,7 +5,8 @@ int length = 4; //кол-во ходов (-1)
 int userIndex = 0;
 int npsIndex = 0;
 
-String userName = InputString("Введите ваше имя");
+Console.WriteLine("Игра: Двадцать одно");
+String userName = InputString("Давай знакомиться!? Как тебя зовут");
 System.Console.WriteLine($"Привет, {userName}!");
 System.Console.WriteLine($"{userName}, предлагаю сыграть в игру - Двадцать одно?");
 String select = InputString("Ты готов (Да/Нет)");
