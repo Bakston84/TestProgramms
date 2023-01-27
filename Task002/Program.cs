@@ -76,8 +76,13 @@ void Game()
         npsNumber = NPSGame(npsNumber);
         if (userNumber > 21)
         {
-            System.Console.WriteLine($"{userName}! У вас {userNumber}. Вы програли!");
+            System.Console.WriteLine($"{userName}! У вас {userNumber}. Вы проиграли!");
             npsIndex++;
+        }
+        else if (npsNumber > 21)
+        {
+            System.Console.WriteLine($"{userName}! У меня {npsNumber}. Вы выиграли!");
+            userIndex++;
         }
         else if (userNumber < npsNumber)
         {
