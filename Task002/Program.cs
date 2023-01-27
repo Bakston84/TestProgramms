@@ -9,7 +9,7 @@ String userName = InputString("Введите ваше имя");
 System.Console.WriteLine($"Привет, {userName}!");
 System.Console.WriteLine($"{userName}, предлагаю сыграть в игру - Двадцать одно?");
 String select = InputString("Ты готов (Да/Нет)");
-if (select == "Да")
+if (select.ToLower() == "да")
 {
     Game();
 }
@@ -57,7 +57,7 @@ void Game()
             for (int j = 0; j < 100; j++)    //цикл для добора очков
             {
                 String select = InputString("Ещё? (Да/Нет)");   //спрашиваем пользователя - добирать или нет
-                if (select == "Да")
+                if (select.ToLower() == "да")
                 {
                     userNumber = userNumber + Randome(number);  //добавляем очки к существующим
                     System.Console.WriteLine($"{userName}! У вас {userNumber}.");   //показываем очки пользователю
