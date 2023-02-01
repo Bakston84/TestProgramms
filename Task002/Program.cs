@@ -6,22 +6,20 @@ int userIndex = 0;
 int npsIndex = 0;
 
 Console.WriteLine("Игра: Двадцать одно");
-String userName = InputString("Давай знакомиться!? Как тебя зовут");
+String? userName = InputString("Давай знакомиться!? Как тебя зовут");
 System.Console.WriteLine($"Привет, {userName}!");
 System.Console.WriteLine($"{userName}, предлагаю сыграть в игру - Двадцать одно?");
-String select = InputString("Ты готов (Да/Нет)");
+String? select = InputString("Ты готов (Да/Нет)");
 if (select.ToLower() == "да")
 {
     Game();
 }
 return;
 
-string InputString(string message)
+string? InputString(string message)
 {
     System.Console.Write(message + " > ");
-    string? inputValue = System.Console.ReadLine();
-    string? result = Convert.ToString(inputValue);
-    return result;
+    return Convert.ToString(Console.ReadLine());
 }
 
 int Randome(int number)
@@ -57,7 +55,7 @@ void Game()
         {
             for (int j = 0; j < 100; j++)    //цикл для добора очков
             {
-                String select = InputString("Ещё? (Да/Нет)");   //спрашиваем пользователя - добирать или нет
+                String? select = InputString("Ещё? (Да/Нет)");   //спрашиваем пользователя - добирать или нет
                 if (select.ToLower() == "да")
                 {
                     userNumber = userNumber + Randome(number);  //добавляем очки к существующим
